@@ -217,8 +217,27 @@ $('document').ready(function () {
 
     function startGame() {
         $("#splashScreen").fadeOut(300, function () {
+            var timeMinutes = 10;
+            var timeSeconds = 0;
             $("#triviaGame").fadeIn();
             populate();
+            setInterval(function(){
+                if (timeSeconds <= 1 && timeMinutes == 0) {
+                    submitResults();
+                    clearInterval();
+                } else if (timeSeconds <= 1) {
+                    timeMinutes--;
+                    timeSeconds = 59;
+                } else {
+                    timeSeconds--;
+                }
+                
+                if (timeSeconds < 10) {
+                    $("#timer").text(timeMinutes + ":0" + timeSeconds);
+                } else {
+                    $("#timer").text(timeMinutes + ":" + timeSeconds);
+                }
+            }, 1000);
         });
 
     }
