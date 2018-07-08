@@ -221,7 +221,7 @@ $('document').ready(function () {
             var timeSeconds = 0;
             $("#triviaGame").fadeIn();
             populate();
-            setInterval(function(){
+            setInterval(function () {
                 if (timeSeconds <= 1 && timeMinutes == 0) {
                     submitResults();
                     clearInterval();
@@ -231,7 +231,7 @@ $('document').ready(function () {
                 } else {
                     timeSeconds--;
                 }
-                
+
                 if (timeSeconds < 10) {
                     $("#timer").text(timeMinutes + ":0" + timeSeconds);
                 } else {
@@ -249,11 +249,11 @@ $('document').ready(function () {
             var answers = "";
 
             for (f = 1; f <= 4; f++) {
-                answers += ('<label><input type="radio" name="' + i + '" class="mr-1" value=' + questions["q" + i].a["a" + f][1] + '>' + questions["q" + i].a["a" + f][0] + '</label>')
+                answers += ('<div class="qDiv"><label class="mx-md-5 label-' + f + '"><input type="radio" name="' + i + '" class="mr-1" value=' + questions["q" + i].a["a" + f][1] + '>' + questions["q" + i].a["a" + f][0] + '</label></div>')
             }
 
             // Attaching it to the question
-            var questionDiv = '<div class="pt-3 pb-5 text-center"><h5 class="mb-4">' + questions["q" + i].q + '</h5>' + answers + '</div>';
+            var questionDiv = '<div class="pt-3 pb-5 text-center fullBlock"><h5 class="mb-4">' + questions["q" + i].q + '</h5>' + answers + '</div>';
             // Adding to the #questionHolder div
             $("#questionHolder").append(questionDiv);
 

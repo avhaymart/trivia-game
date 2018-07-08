@@ -1,13 +1,7 @@
-body {
-    background-image: url(../images/background.png);
-}
-
 #splashScreen,
 #triviaGame,
 #answerScreen {
-    background-color: rgb(245, 245, 245);
-    min-height: 90vh;
-    margin: 5vh 0;
+    min-height: 100vh;
 }
 
 #splashScreen,
@@ -24,6 +18,66 @@ body {
 }
 
 label {
-    display: block;
-    margin: 0 0 1.5em 1em;
+    border: 1px solid transparent;
+    margin: 1rem;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.label-1 {
+    background-color: #dc3545;
+    border-color: #dc3545
+}
+
+.label-1:hover {
+    background-color: #c82333;
+    border-color: #bd2130
+}
+
+.label-1,
+.btn-danger {
+    border-bottom: 2px solid hsl(354, 69%, 39%);
+    border-left: 1px solid hsl(354, 69%, 39%);
+    border-right: 1px solid hsl(354, 69%, 39%);
+}
+
+.label-2 {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-bottom: 2px solid hsl(211, 69%, 39%);
+    border-left: 1px solid hsl(211, 69%, 39%);
+    border-right: 1px solid hsl(211, 69%, 39%);
+}
+
+.label-2:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+.label-3 {
+    background-color: #e9af00;
+    border-color: #e9af00;
+    border-bottom: 2px solid hsl(45, 69%, 39%);
+    border-left: 1px solid hsl(45, 69%, 39%);
+    border-right: 1px solid hsl(45, 69%, 39%);
+}
+
+.label-3:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.label-4 {
+    background-color: #28a745;
+    border-color: #28a745;
+    border-bottom: 2px solid hsl(134, 68%, 32%);
+    border-left: 1px solid hsl(134, 68%, 32%);
+    border-right: 1px solid hsl(134, 68%, 32%);
+}
+
+.label-4:hover {
+    background-color: #218838;
+    border-color: #1e7e34
 }
